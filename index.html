@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment QR Selector</title>
+  <meta name="description" content="Responsive payment QR display page for Easypaisa, Bank Alfalah, and JazzCash." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="payment-card" aria-labelledby="payment-heading">
+      <p class="eyebrow">Secure Payment Selection</p>
+      <h1 id="payment-heading">Choose Payment Method</h1>
+      <p class="subtitle">Select a payment option to preview its QR code instantly.</p>
+
+      <div class="button-grid" role="tablist" aria-label="Payment methods">
+        <button class="pay-btn active" type="button" data-method="easypaisa" aria-pressed="true">💸 Easypaisa</button>
+        <button class="pay-btn" type="button" data-method="alfalah" aria-pressed="false">🏦 Bank Alfalah</button>
+        <button class="pay-btn" type="button" data-method="jazzcash" aria-pressed="false">📱 JazzCash</button>
+      </div>
+
+      <div class="qr-stage" aria-live="polite">
+        <article class="qr-card active" data-qr="easypaisa">
+          <p class="qr-label">Easypaisa QR</p>
+          <img src="Images/Easypaisa.jpeg" alt="Easypaisa QR code" />
+        </article>
+
+        <article class="qr-card" data-qr="alfalah">
+          <p class="qr-label">Bank Alfalah QR</p>
+          <img src="Images/Bank Transfer .jpeg" alt="Bank Alfalah QR code" />
+        </article>
+
+        <article class="qr-card" data-qr="jazzcash">
+          <p class="qr-label">JazzCash QR</p>
+          <img src="Images/JazzCash.jpeg" alt="JazzCash QR code" />
+        </article>
+      </div>
+
+      <footer class="footer-note">Secure Payment Selection</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
